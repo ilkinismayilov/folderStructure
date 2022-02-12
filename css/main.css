@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+.nested-list{
+    background-color: black;
+    width: 250px;
+    height: 100vh;
+    padding: 10px;
+}
+
+.list{
+    list-style-type: none;
+}
+
+.list-item{
+    margin-left: -21px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+span{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.fa-folder.rootFolder path{
+    fill: #FFFFFF;
+}
+.fa-folder.cssFolder path{
+    fill: #42A5F5;
+}
+.fa-folder.jsFolder path{
+    fill: #FFCA28;
+}
+.fa-folder.imgFolder path{
+    fill: #009688;
+}
+
+.fa-css3-alt path{
+    fill: #42A5F5;
+}
+.fa-js-square path{
+    fill: #FFCA28;
+}
+.fa-file-image path{
+    fill: #009688;
+}
+.fa-html5 path{
+    fill: #E54C27;
+}
