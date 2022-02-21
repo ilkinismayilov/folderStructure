@@ -1,0 +1,81 @@
+{
+    "data": [
+        {
+            "name": "index.html",
+            "id": 1,
+            "type": "2",
+            "createdAt": "1644564571559",
+         
+            "children":[]
+        },
+        {
+            "name": "css",
+            "id": 2,
+            "type": "1",
+            "createdAt": "1644564571559",
+            "className": "cssFolder",
+            "children": [
+                {
+                    "name": "main.css",
+                    "id": 3,
+                    "type": "2",
+                    "createdAt": "1644564571559"
+                },
+                {
+                    "name": "style.css",
+                    "id": 4,
+                    "type": "2",
+                    "createdAt": "1644564571559"
+                }
+            ]
+        },
+        {
+            "name": "js",
+            "id": 5,
+            "type": "1",
+            "createdAt": "1644564571559",
+            "className": "jsFolder",
+            "children": [
+                {
+                    "name": "main.js",
+                    "id": 6,
+                    "type": "2",
+                    "createdAt": "1644564571559"
+                },
+                {
+                    "name": "db.json",
+                    "id": 7,
+                    "type": "2",
+                    "createdAt": "1644564571559"
+                }
+            ]
+        },
+        {
+            "name": "img",
+            "id": 8,
+            "type": "1",
+            "createdAt": "1644564571559",
+            "className": "imgFolder",
+            "children": [
+                {
+                    "name": "logo.png",
+                    "id": 9,
+                    "type": "2",
+                    "createdAt": "1644564571559"
+                },
+                {
+                    "name": "header.png",
+                    "id": 10,
+                    "type": "2",
+                    "createdAt": "1644564571559"
+                },
+                {
+                    "name": "profile.png",
+                    "id": 11,
+                    "type": "2",
+                    "createdAt": "1644564571559"
+                }
+            ]
+        }
+    ]
+  }
