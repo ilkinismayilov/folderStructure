@@ -1,6 +1,6 @@
 // http://127.0.0.1:5500/js/db.json
 
-fetch('http://127.0.0.1:5500/js/db.json') 
+fetch('js/db.json') 
  .then( (res) => res.json() ) 
  .then( (output => { var json = output.data; 
 
