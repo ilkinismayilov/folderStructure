@@ -258,10 +258,6 @@ fetch('js/db.json')
   } // createFolderElement function end
 
   
-  function deleteFolderElement(){
-    var o = document.getElementsByClassName('delIcon');
-    console.log(o)
-  }  // deleteFolderElement function end
 
 
 
