@@ -5,7 +5,6 @@ fetch('js/db.json')
  .then( (output => { var json = output.data; 
   // console.log(json);
    
-
     for (let j = 0; j < json.length; j++) {
 
         const element = json[j];
@@ -206,7 +205,7 @@ fetch('js/db.json')
 
       for (let i = 0; i < json.length; i++) {
         const element = json[i];
-        // console.log(element)
+        
         if(txt === element.name){
           alert("Can not be same name");
             return;         
@@ -268,28 +267,14 @@ fetch('js/db.json')
               document.getElementById('toggleJs').appendChild(liNew);
             }else if(select === 'img'){
               document.getElementById('id="toggleImg"').appendChild(liNew);
-            }
-            
-            
+            }  
           }
- 
-          // liNew.classList.add('list-item');
-          // liNew.appendChild(divNew);
-          // divNew.classList.add('list-label');
-          // divNew.appendChild(aNew);
-          // divNew.addEventListener("click",clickElement)
-          // aNew.setAttribute('href',"#");
-          // aNew.appendChild(iNew);
-          // iNew.classList.add('fa-solid','fa-code' ); 
-          // aNew.appendChild(spanNew);
-          // spanNew.textContent=txt;
-    
+
         }else{
 
           if (select === '') {
             
             liNew.classList.add('list-item');
-          // liNew.setAttribute('id',`${element.className}`);
             liNew.appendChild(divNew);
             divNew.classList.add('list-label');
             divNew.appendChild(aNew);
@@ -303,7 +288,6 @@ fetch('js/db.json')
             
           }else{
             liNew.classList.add('list-item');
-            // liNew.setAttribute('id',`${element.className}`);
             liNew.appendChild(divNew);
             divNew.classList.add('list-label');
             divNew.appendChild(aNew);
@@ -320,24 +304,10 @@ fetch('js/db.json')
             }else if(select === 'img'){
               document.getElementById('id="toggleImg"').appendChild(liNew);
             }
-            
-            
+ 
           }
 
-          // liNew.classList.add('list-item');
-          // // liNew.setAttribute('id',`${element.className}`);
-          // liNew.appendChild(divNew);
-          // divNew.classList.add('list-label');
-          // divNew.appendChild(aNew);
-          // aNew.setAttribute('href',"#");
-          // aNew.appendChild(iNew);
-          // iNew.classList.add('fa-regular','fa-folder' ); 
-          // aNew.appendChild(spanNew);
-          // spanNew.textContent=txt;
-
-          // document.getElementById('list').appendChild(liNew);
         }
-        // document.getElementById('list').appendChild(liNew);
       }
       document.getElementById("text_id").value = '';
   } // createFolderElement function end
