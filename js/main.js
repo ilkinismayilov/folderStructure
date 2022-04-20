@@ -201,10 +201,16 @@ fetch('js/db.json')
     
     function createFolderElement(){
       var txt = document.getElementById("text_id").value;
+      var select = document.getElementById("folder").value;
+      console.log(select);
 
       for (let i = 0; i < json.length; i++) {
         const element = json[i];
         // console.log(element)
+        if(txt === element.name){
+          alert("Can not be same name");
+            return;         
+        }
         
         for (let k = 0; k < element.children.length; k++) {
           var check = element.children[k].name;
@@ -228,31 +234,110 @@ fetch('js/db.json')
       }else{
 
         if(txt.includes('.')){
+
+          if (select === '') {
+            
+            liNew.classList.add('list-item');
+            liNew.appendChild(divNew);
+            divNew.classList.add('list-label');
+            divNew.appendChild(aNew);
+            divNew.addEventListener("click",clickElement)
+            aNew.setAttribute('href',"#");
+            aNew.appendChild(iNew);
+            iNew.classList.add('fa-solid','fa-code' ); 
+            aNew.appendChild(spanNew);
+            spanNew.textContent=txt;
+
+            document.getElementById('list').appendChild(liNew);
+            
+          }else{
+            liNew.classList.add('list-item');
+            liNew.appendChild(divNew);
+            divNew.classList.add('list-label');
+            divNew.appendChild(aNew);
+            divNew.addEventListener("click",clickElement)
+            aNew.setAttribute('href',"#");
+            aNew.appendChild(iNew);
+            iNew.classList.add('fa-solid','fa-code' ); 
+            aNew.appendChild(spanNew);
+            spanNew.textContent=txt;
+
+            if (select === 'css') {
+              document.getElementById('toggleCss').appendChild(liNew);
+            }else if(select === 'js'){
+              document.getElementById('toggleJs').appendChild(liNew);
+            }else if(select === 'img'){
+              document.getElementById('id="toggleImg"').appendChild(liNew);
+            }
+            
+            
+          }
  
-          liNew.classList.add('list-item');
-          liNew.appendChild(divNew);
-          divNew.classList.add('list-label');
-          divNew.appendChild(aNew);
-          divNew.addEventListener("click",clickElement)
-          aNew.setAttribute('href',"#");
-          aNew.appendChild(iNew);
-          iNew.classList.add('fa-solid','fa-code' ); 
-          aNew.appendChild(spanNew);
-          spanNew.textContent=txt;
+          // liNew.classList.add('list-item');
+          // liNew.appendChild(divNew);
+          // divNew.classList.add('list-label');
+          // divNew.appendChild(aNew);
+          // divNew.addEventListener("click",clickElement)
+          // aNew.setAttribute('href',"#");
+          // aNew.appendChild(iNew);
+          // iNew.classList.add('fa-solid','fa-code' ); 
+          // aNew.appendChild(spanNew);
+          // spanNew.textContent=txt;
     
         }else{
-          liNew.classList.add('list-item');
+
+          if (select === '') {
+            
+            liNew.classList.add('list-item');
           // liNew.setAttribute('id',`${element.className}`);
-          liNew.appendChild(divNew);
-          divNew.classList.add('list-label');
-          divNew.appendChild(aNew);
-          aNew.setAttribute('href',"#");
-          aNew.appendChild(iNew);
-          iNew.classList.add('fa-regular','fa-folder' ); 
-          aNew.appendChild(spanNew);
-          spanNew.textContent=txt;
+            liNew.appendChild(divNew);
+            divNew.classList.add('list-label');
+            divNew.appendChild(aNew);
+            aNew.setAttribute('href',"#");
+            aNew.appendChild(iNew);
+            iNew.classList.add('fa-regular','fa-folder' ); 
+            aNew.appendChild(spanNew);
+            spanNew.textContent=txt;
+
+            document.getElementById('list').appendChild(liNew);
+            
+          }else{
+            liNew.classList.add('list-item');
+            // liNew.setAttribute('id',`${element.className}`);
+            liNew.appendChild(divNew);
+            divNew.classList.add('list-label');
+            divNew.appendChild(aNew);
+            aNew.setAttribute('href',"#");
+            aNew.appendChild(iNew);
+            iNew.classList.add('fa-regular','fa-folder' ); 
+            aNew.appendChild(spanNew);
+            spanNew.textContent=txt;
+
+            if (select === 'css') {
+              document.getElementById('toggleCss').appendChild(liNew);
+            }else if(select === 'js'){
+              document.getElementById('toggleJs').appendChild(liNew);
+            }else if(select === 'img'){
+              document.getElementById('id="toggleImg"').appendChild(liNew);
+            }
+            
+            
+          }
+
+          // liNew.classList.add('list-item');
+          // // liNew.setAttribute('id',`${element.className}`);
+          // liNew.appendChild(divNew);
+          // divNew.classList.add('list-label');
+          // divNew.appendChild(aNew);
+          // aNew.setAttribute('href',"#");
+          // aNew.appendChild(iNew);
+          // iNew.classList.add('fa-regular','fa-folder' ); 
+          // aNew.appendChild(spanNew);
+          // spanNew.textContent=txt;
+
+          // document.getElementById('list').appendChild(liNew);
         }
-        document.getElementById('list').appendChild(liNew);
+        // document.getElementById('list').appendChild(liNew);
       }
       document.getElementById("text_id").value = '';
   } // createFolderElement function end
